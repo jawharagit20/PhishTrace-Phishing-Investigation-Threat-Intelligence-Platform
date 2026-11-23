@@ -1,0 +1,136 @@
+{
+    "total_files": 2,
+    "successful_investigations": 2,
+    "failed_files": [],
+    "campaign_analysis": {
+        "total_investigations": 2,
+        "campaigns_detected": 1,
+        "indicator_frequency": {
+            "email_addresses": {
+                "security-alert@example.test": 2
+            },
+            "domains": {
+                "example.test": 2,
+                "login-example.test": 2
+            },
+            "ipv4_addresses": {
+                "192.0.2.45": 2
+            },
+            "urls": {
+                "https://example.test/verify": 2
+            },
+            "attachment_sha256": {}
+        },
+        "campaigns": [
+            {
+                "campaign_id": "CAMPAIGN-001",
+                "email_count": 2,
+                "emails": [
+                    {
+                        "file_name": "phishing_sample.eml"
+                    },
+                    {
+                        "file_name": "phishing_sample_2.eml"
+                    }
+                ],
+                "shared_indicators": {
+                    "email_addresses": [
+                        "security-alert@example.test"
+                    ],
+                    "domains": [
+                        "example.test",
+                        "login-example.test"
+                    ],
+                    "ipv4_addresses": [
+                        "192.0.2.45"
+                    ],
+                    "urls": [
+                        "https://example.test/verify"
+                    ]
+                },
+                "relationships": [
+                    {
+                        "first_email": "phishing_sample.eml",
+                        "second_email": "phishing_sample_2.eml",
+                        "shared_indicators": {
+                            "email_addresses": [
+                                "security-alert@example.test"
+                            ],
+                            "domains": [
+                                "example.test",
+                                "login-example.test"
+                            ],
+                            "ipv4_addresses": [
+                                "192.0.2.45"
+                            ],
+                            "urls": [
+                                "https://example.test/verify"
+                            ]
+                        },
+                        "confidence_score": 10,
+                        "confidence_level": "high",
+                        "evidence": [
+                            {
+                                "indicator_type": "urls",
+                                "description": "Shared URL",
+                                "weight": 4,
+                                "applied_weight": 4,
+                                "matched_values": [
+                                    "https://example.test/verify"
+                                ],
+                                "frequency": {
+                                    "https://example.test/verify": 2
+                                },
+                                "common_infrastructure": false
+                            },
+                            {
+                                "indicator_type": "domains",
+                                "description": "Shared domain",
+                                "weight": 3,
+                                "applied_weight": 3,
+                                "matched_values": [
+                                    "example.test",
+                                    "login-example.test"
+                                ],
+                                "frequency": {
+                                    "example.test": 2,
+                                    "login-example.test": 2
+                                },
+                                "common_infrastructure": false
+                            },
+                            {
+                                "indicator_type": "ipv4_addresses",
+                                "description": "Shared IP address",
+                                "weight": 2,
+                                "applied_weight": 2,
+                                "matched_values": [
+                                    "192.0.2.45"
+                                ],
+                                "frequency": {
+                                    "192.0.2.45": 2
+                                },
+                                "common_infrastructure": false
+                            },
+                            {
+                                "indicator_type": "email_addresses",
+                                "description": "Shared email address",
+                                "weight": 1,
+                                "applied_weight": 1,
+                                "matched_values": [
+                                    "security-alert@example.test"
+                                ],
+                                "frequency": {
+                                    "security-alert@example.test": 2
+                                },
+                                "common_infrastructure": false
+                            }
+                        ]
+                    }
+                ],
+                "confidence_score": 10,
+                "confidence_level": "high"
+            }
+        ],
+        "scoring_method": "frequency-aware heuristic weighted indicator matching"
+    }
+}

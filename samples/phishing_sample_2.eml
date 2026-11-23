@@ -1,0 +1,45 @@
+From: Security Department <security@example.test>
+To: analyst@example.test
+Reply-To: support@example.test
+Return-Path: <bounce@example.test>
+Subject: Urgent: Verify Your Account
+Date: Fri, 20 Nov 2026 09:30:00 +0100
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="boundary123"
+
+--boundary123
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Customer,
+
+Your account requires immediate verification.
+
+Please visit:
+https://example.test/verify
+
+Contact: security-alert@example.test
+
+Suspicious server: 192.0.2.45
+
+Additional domain: login-example.test
+
+Thank you,
+Security Department
+
+--boundary123
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<body>
+<h2>Account Security Notification</h2>
+
+<p>Your account requires immediate verification.</p>
+
+<a href="https://example.test/verify">
+    Verify Your Account
+</a>
+
+</body>
+</html>
+
+--boundary123--
